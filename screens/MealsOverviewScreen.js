@@ -3,7 +3,7 @@ import { useRoute } from '@react-navigation/native'
 import React, { useEffect, useLayoutEffect } from 'react'
 
 import { MEALS, CATEGORIES } from '../data/dummy-data'
-import MealItem from '../components/MealItem'
+import MealsList from '../components/MealsList/MealsList'
 
 const MealsOverviewScreen = ({ route, navigation }) => {
   // const route = useRoute();
@@ -21,31 +21,9 @@ const MealsOverviewScreen = ({ route, navigation }) => {
     });
   }, [catId])
 
-  function renderMealItem(itemData) {
-    const item = itemData.item
+  return <MealsList items={displayMeals} />
 
-    const mealItemProps = {
-      id: item.id,
-      title: item.title,
-      imageUrl: item.imageUrl,
-      duration: item.duration,
-      complexity: item.complexity,
-      affordability: item.affordability
-    }
 
-    return <MealItem {...mealItemProps} />
-  }
-
-  return (
-    <View>
-      <FlatList
-        data={displayMeals}
-        keyExtractor={(item) => item.id}
-        renderItem={renderMealItem}
-      />
-      {/* <Text>MealsOverviewScreen - {catId}</Text> */}
-    </View>
-  )
 }
 
 export default MealsOverviewScreen
