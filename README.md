@@ -12,7 +12,7 @@ note that the data being displayed is a dummy data not from sa server.
 
 
 ### Disclaimer
-This project idea is from the React Native - The Practical Guide [2022] course and just follow along the tutorial.
+This project idea is from the React Native - The Practical Guide [2022] course and just I follow along the tutorial.
 
 Udemy course link: https://www.udemy.com/course/react-native-the-practical-guide/
 
